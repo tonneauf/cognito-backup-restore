@@ -1,3 +1,9 @@
+Forked from 1.3.2
+
+Handle:
++ Missing regions
++ Bugfix of `User data isn't completely flushed to disk when backupUsers resolves`: [github issue](https://github.com/rahulpsd18/cognito-backup-restore/issues/39)
+
 # cognito-backup-restore
 [![All Contributors](https://img.shields.io/badge/all_contributors-10-orange.svg?style=flat-square)](#contributors)
 
