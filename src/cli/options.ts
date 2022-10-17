@@ -15,15 +15,21 @@ const searchCognitoRegion = async (_: never, input: string) => {
     const region = [
         { get name() { return greenify(this.value) + ' :: US East (N. Virginia)' }, value: 'us-east-1' },
         { get name() { return greenify(this.value) + ' :: US East (Ohio)' }, value: 'us-east-2' },
+        { get name() { return greenify(this.value) + ' :: US West (N. California)' }, value: 'us-west-1' },
         { get name() { return greenify(this.value) + ' :: US West (Oregon)' }, value: 'us-west-2' },
         { get name() { return greenify(this.value) + ' :: Asia Pacific (Mumbai)' }, value: 'ap-south-1' },
         { get name() { return greenify(this.value) + ' :: Asia Pacific (Tokyo)' }, value: 'ap-northeast-1' },
         { get name() { return greenify(this.value) + ' :: Asia Pacific (Seoul)' }, value: 'ap-northeast-2' },
         { get name() { return greenify(this.value) + ' :: Asia Pacific (Singapore)' }, value: 'ap-southeast-1' },
         { get name() { return greenify(this.value) + ' :: Asia Pacific (Sydney)' }, value: 'ap-southeast-2' },
+        { get name() { return greenify(this.value) + ' :: Canada (Central)' }, value: 'ca-central-1' },
         { get name() { return greenify(this.value) + ' :: EU (Frankfurt)' }, value: 'eu-central-1' },
         { get name() { return greenify(this.value) + ' :: EU (Ireland)' }, value: 'eu-west-1' },
-        { get name() { return greenify(this.value) + ' :: EU (London)' }, value: 'eu-west-2' }
+        { get name() { return greenify(this.value) + ' :: EU (London)' }, value: 'eu-west-2' },
+        { get name() { return greenify(this.value) + ' :: EU (Paris)' }, value: 'eu-west-3' },
+        { get name() { return greenify(this.value) + ' :: EU (Stockholm)' }, value: 'eu-north-1' },
+        { get name() { return greenify(this.value) + ' :: Middle East (Bahrain)' }, value: 'me-south-1' },
+        { get name() { return greenify(this.value) + ' :: South America (São Paulo)' }, value: 'sa-east-1' }
     ];
     const fuzzyResult = fuzzy.filter(input, region, { extract: el => el.value });
     return fuzzyResult.map(el => {
